@@ -2,64 +2,48 @@ extends ./layout.jade
 
 block content
 
-      img#pic(src='images/cthulu.png', alt='Photo of Cthulu')
+      img#pic(src=cv.profilePicture, alt='Photo of'+cv.name)
       #contact-info.vcard
-        //
-           Microformats! 
-        h1.fn C'thulhu
+        h1.fn=cv.name
         p
           | Cell:
-          span.tel 555-666-7777
+          span.tel=cv.cell
           br
           | Email:
-          a.email(href='mailto:greatoldone@lovecraft.com') greatoldone@lovecraft.com
+          a.email(href='mailto:'+cv.email)=cv.email
       #objective
         p
-          | I am an outgoing and energetic (ask anybody) young professional, seeking a
-          | career that fits my professional skills, personality, and murderous tendencies.
-          | My squid-like head is a masterful problem solver and inspires fear in who gaze upon it.
-          | I can bring world domination to your organization.
+          cv.objective
       .clear
       dl
         dd.clear
         dt Education
-        dd
-          h2 Withering Madness University - Planet Vhoorl
-          p
-            strong Major:
-            | Public Relations
-            br
-            strong Minor:
-            | Scale Tending
-        dd.clear
+        foreach school in cv.education.schools
+          dd
+            h2 school.name
+            p
+              school.description
+          dd.clear
         dt Skills
         dd
-          h2 Office skills
-          p
-            | Office and records management, database administration, event organization, customer support, travel coordination
-          h2 Computer skills
-          p
-            | Microsoft productivity software (Word, Excel, etc), Adobe Creative Suite, Windows
+          foreach skill in cv.skills
+            h2 skill.name
+            p
+              skill.description
         dd.clear
         dt Experience
         dd
+          foreach experience in cv.experience
           h2
-            | Doomsday Cult
-            span Leader/Overlord - Baton Rogue, LA - 1926-2010
+            experiece.name
+            experience.position
           ul
-            li Inspired and won highest peasant death competition among servants
-            li Helped coordinate managers to grow cult following
-            li Provided untimely deaths to all who opposed
-          h2
-            | The Watering Hole
-            span Bartender/Server - Milwaukee, WI - 2009
-          ul
-            li Worked on grass-roots promotional campaigns
-            li Reduced theft and property damage percentages
-            li Janitorial work, Laundry
-        dd.clear
+            foreach achievement in experience.achievements
+              li achievement
+           dd.clear
         dt Hobbies
-        dd World Domination, Deep Sea Diving, Murder Most Foul
+        foreach hobby in cv.hobbies
+          dd hobby
         dd.clear
         dt References
         dd Available on request

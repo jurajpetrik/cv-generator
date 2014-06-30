@@ -8,7 +8,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
-var ArticleProvider = require('./articleprovider-memory').ArticleProvider;
+var CVProvider = require('./cvprovider-memory').CVProvider;
 
 var app = express();
 
@@ -33,28 +33,15 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-var articleProvider = new ArticleProvider('localhost', 27017);
+var CVProvider = new CVProvider('localhost', 27017);
 
 app.get('/', function(req, res){
     console.log('showing cv');
+    CVProvider.findById(0,function(error,cv){
     res.render('cv.jade', {
-       title: 'Juraj Petrik CV'
-            });
-});
-
-app.get('/blog/new', function(req, res) {
-    res.render('blog_new', { locals: {
-        title: 'New Post'
-    }
-    });
-});
-
-app.post('/blog/new', function(req, res){
-    articleProvider.save({
-        title: req.param('title'),
-        body: req.param('body')
-    }, function( error, docs) {
-        res.redirect('/')
+       title: 'Juraj Petrik CV',
+       cv: cv
+      })  
     });
 });
 
