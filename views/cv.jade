@@ -18,11 +18,10 @@ block content
       dl
         dd.clear
         dt Education
-        foreach school in cv.education.schools
+        each school in cv.education
           dd
-            h2 school.name
-            p
-              school.description
+            h2=school.name
+            p=school.description
           dd.clear
         dt Skills
         dd
@@ -36,7 +35,8 @@ block content
           foreach experience in cv.experience
           h2
             experiece.name
-            experience.position
+            span 
+              experience.position
           ul
             foreach achievement in experience.achievements
               li achievement
