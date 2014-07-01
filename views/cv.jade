@@ -2,50 +2,27 @@ extends ./layout.jade
 
 block content
 
-      img#pic(src=cv.profilePicture, alt='Photo of'+cv.name)
-      #contact-info.vcard
-        h1.fn=cv.name
-        p
-          | Cell:
-          span.tel=cv.cell
-          br
-          | Email:
-          a.email(href='mailto:'+cv.email)=cv.email
-      #objective
-        p
-          cv.objective
-      .clear
-      dl
-        dd.clear
-        dt Education
-        each school in cv.education
-          dd
-            h2=school.name
-            p=school.description
-          dd.clear
-        dt Skills
-        dd
-          foreach skill in cv.skills
-            h2 skill.name
-            p
-              skill.description
-        dd.clear
-        dt Experience
-        dd
-          foreach experience in cv.experience
-          h2
-            experiece.name
-            span 
-              experience.position
-          ul
-            foreach achievement in experience.achievements
-              li achievement
-           dd.clear
-        dt Hobbies
-        foreach hobby in cv.hobbies
-          dd hobby
-        dd.clear
-        dt References
-        dd Available on request
-        dd.clear
-      .clear
+	img#pic(src=cv.profilePicture, alt='Photo of'+cv.name)
+	#contact-info.vcard
+		h1.fn=cv.name
+		p
+			| Cell:
+			span.tel=cv.cell
+			br
+			| Email:
+			a.email(href='mailto:'+cv.email)=cv.email
+			#objective
+		p
+			cv.objective
+			.clear
+			dl
+				each block in cv.blocks 
+					dd.clear
+					dt=block.headline
+					each child in block.children
+						dd
+							h2=child.title
+							strong=child.time
+							br
+							p=child.content
+						dd.clear
