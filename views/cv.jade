@@ -11,18 +11,20 @@ block content
 			br
 			| Email:
 			a.email(href='mailto:'+cv.email)=cv.email
-			#objective
-		p
-			cv.objective
-			.clear
-			dl
-				each block in cv.blocks 
-					dd.clear
-					dt=block.headline
-					each child in block.children
-						dd
-							h2=child.title
-							strong=child.time
-							br
-							p=child.content
-						dd.clear
+			br
+			| Github:
+			a(href=cv.github) github
+	#objective
+		p=cv.objective
+	.clear
+	dl
+		each block in cv.blocks 
+			dt=block.headline
+			each child in block.children
+				dd
+					h2=child.title
+						span=child.titleOverlay
+					strong=child.time
+					br
+					p=child.content
+				dd.clear

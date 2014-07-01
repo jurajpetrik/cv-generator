@@ -1,14 +1,14 @@
 CVProvider = function(){};
 CVProvider.prototype.dummyData = {
-profilePicture: 'images/cthulu.png',
-name: 'Juraj Petrik',
+profilePicture: 'images/profile.jpg',
+name: 'Juraj Petrík',
 cell: '+55 11 905970953',
 email: 'jurajpetrik77@gmail.com',
 github: 'https://github.com/jurajpetrik',
-objective: 'colonization of the solar system',
+objective: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 blocks:
 [{
-	headline: 'education',
+	headline: 'Education',
 	children:[
 	{
 		title: 'Via University College',
@@ -17,18 +17,20 @@ blocks:
 	}]
 },
 {
-	headline: 'work experience',
+	headline: 'Work experience',
 	children:[
+	{
+		title: 'Taqtile',
+		titleOverlay: 'Software developer',
+		time: 'Feb 2014 - August 2014',
+		content: 'iOs development<br  />C# backend'
+	},
 	{
 		title: 'Ifactory Solutions',
 		time: '2013-2014',
 		content: 'not much'
-	},
-	{
-		title: 'Taqtile',
-		time: 'Feb 2014 - August 2014',
-		content: 'Majored in doing fuck all'
-	}]
+	}	
+	]
 }
 ]
 };
