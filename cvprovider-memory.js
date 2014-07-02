@@ -31,6 +31,16 @@ blocks:
 		content: 'not much'
 	}	
 	]
+},
+{
+	headline: 'Project',
+	children:[
+	{
+		title: 'World peace',
+		time: '2002-2014',
+		content: 'World leader'
+	}
+	]
 }
 ]
 };
