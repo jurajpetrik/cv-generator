@@ -12,8 +12,14 @@ block content
 			| Email:
 			a.email(href='mailto:'+cv.email)=cv.email
 			br
-			| Github:
-			a(href=cv.github) github
+			if cv.github || cv.linkedIn
+				div
+					if cv.linkedin
+						a.social(href=cv.linkedin alt = 'Link to '+cv.name+'\'s linkedIn profile')
+							img(src="images/linkedin.jpg")
+					if cv.github
+						a.social(href=cv.github alt = 'Link to '+cv.name+'\'s github profile')
+							img(src="images/github.jpg")
 	#objective
 		p=cv.objective
 	.clear
@@ -22,9 +28,18 @@ block content
 			dt=block.headline
 			each child in block.children
 				dd
-					h2=child.title
-						span=child.titleOverlay
-					strong=child.time
-					br
-					p=child.content
+					h2
+						if child.titleOverlay
+							span=child.titleOverlay
+						if child.link
+							a(href=child.link, alt = 'Link to'+child.title)=child.title
+						else
+							=child.title
+					if child.secondaryTitle
+						h3
+							=child.secondaryTitle
+					p
+						each line in child.content
+							=line
+							br
 				dd.clear
