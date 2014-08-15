@@ -6,7 +6,7 @@ cell: '+55 11 905970953',
 email: 'jurajpetrik77@gmail.com',
 github: 'https://github.com/jurajpetrik',
 linkedin: 'https://www.linkedin.com/pub/juraj-petrik/67/8a8/b59',
-objective: 'stuff',
+objective: 'I love writing code and often do so in my free time. My colleagues describe me as a good technology generalist and often say I am quick to pick up new technologies. I see software as a way to shape the world and I am looking for a company whose mission I can get behind. I have experience working in big software teams, alone and everything in between. I am currently living in Eindhoven, Netherlands but willing to relocate for the right opportunity',
 blocks:
 [{
 	headline: 'Work experience',
@@ -50,7 +50,8 @@ blocks:
 	headline: 'Education',
 	children:[
 	{
-		title: 'Via University College - ICT Engineering',
+		title: 'Via University College',
+		secondaryTitle: 'ICT Engineering',
 		titleOverlay: 'Horsens, Denmark',
 		time: '2011-2015(ongoing)',
 		content: [
