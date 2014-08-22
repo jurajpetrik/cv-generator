@@ -13,6 +13,8 @@ var CVProvider = require('./cvprovider-memory').CVProvider;
 var app = express();
 
 // all environments
+var port = process.env.PORT || 3000;
+
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -104,5 +106,5 @@ app.post('/blog/addComment', function(req, res) {
 
 
 
-app.listen(3000);
+app.listen(port);
 
