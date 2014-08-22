@@ -7,10 +7,10 @@ block content
 		h1.fn=cv.name
 		p
 			| Cell:
-			span.tel=cv.cell
+			span.tel=' '+cv.cell
 			br
 			| Email:
-			a.email(href='mailto:'+cv.email)=cv.email
+			a.email(href='mailto:'+cv.email)=' '+cv.email
 			br
 			if cv.github || cv.linkedIn
 				div

@@ -2,7 +2,7 @@ CVProvider = function(){};
 CVProvider.prototype.dummyData = {
 profilePicture: 'images/profile.jpg',
 name: 'Juraj Petrík',
-cell: '+55 11 905970953',
+cell: '+421 944 922 384',
 email: 'jurajpetrik77@gmail.com',
 github: 'https://github.com/jurajpetrik',
 linkedin: 'https://www.linkedin.com/pub/juraj-petrik/67/8a8/b59',
