@@ -30,6 +30,26 @@ blocks:
 	]
 },
 {
+	headline: 'Education',
+	children:[
+	{
+		title: 'Via University College',
+		secondaryTitle: '2011-present ICT Engineering',
+		titleOverlay: 'Horsens, Denmark',
+		content: [
+			'I am currently still doing my bachelors in Information Communication Technology Engineering. At the moment I am on Erasmus exchange program in Fontys, Netherlands'
+				]
+	},
+	{
+		title: 'J.M.Hurban Gymnasium',
+		secondaryTitle: '2007-2011',
+		titleOverlay: 'Cadca, Slovakia',
+		content: [
+			''
+				]
+	}]
+},
+{
 	headline: 'Projects',
 	children:[
 	{
@@ -45,19 +65,6 @@ blocks:
 		' Semi-successful, works with long delays in sound.']	
 	}
 	]
-},
-{
-	headline: 'Education',
-	children:[
-	{
-		title: 'Via University College',
-		secondaryTitle: 'ICT Engineering',
-		titleOverlay: 'Horsens, Denmark',
-		time: '2011-2015(ongoing)',
-		content: [
-			'I am currently still doing my bachelors in Information Communication Technology Engineering. At the moment I am on Erasmus exchange program in Fontys, Netherlands'
-				]
-	}]
 }
 ]
 };
